@@ -1,0 +1,166 @@
+@import "http://fonts.googleapis.com/css?family=Electrolize";
+
+html {
+    font-family:'Droid Sans',Helvetica,Arial,sans-serif;
+    font-family:'Droid Serif',serif;
+    touch-action:manipulation;
+    position:relative;
+    min-height:120%;
+    width: 100%;
+}
+
+[data-role="page"] {
+/* CSS styles for the pages */
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:5;
+    background-color:#333;
+    color:#fff;
+    display:block;
+    opacity:0;
+    transition:opacity .8s ease
+}
+
+[data-role="page"].active {
+    transition:opacity .8s ease;
+    z-index:10;
+    opacity:1;
+    display:block;
+    position:absolute
+}
+
+h1 {
+    padding:.5rem 2rem;
+    font-size:2rem
+}
+.closing{
+ text-align: center;
+    
+}
+
+.icon {
+    z-index:2000;
+    width:90%;
+    height:90%;
+    margin:2.8% 0 0 5%
+}
+#theMap{
+    margin-top: 30%;
+    margin-left: 0.8%;
+    width: 98%;
+    height: 60%;
+}
+.inputcontact {
+    margin:30% 0 0 0;
+}
+.listpeople{
+margin-left: -37px;   
+width:100%;
+}
+.linkdink{
+text-decoration: none;   
+color: black;   
+    
+}
+
+
+#home {
+    background:#263248;
+}
+
+#login {
+    background-color:#263248;
+}
+[data-role="listview"]{
+  list-style:none;
+}
+[data-role="listview"] li{
+  font-size:1.2rem;
+  line-height:3rem;
+  height:3rem;
+  border:1px solid #000;
+  background-color:#ccc;
+  color:#333;
+  font-weight:300;
+  padding:0 1rem;
+  cursor:pointer;
+}
+
+/***********
+geolocoation
+***********/
+.geogeo {
+    text-align:center;
+    margin:40% 10% 0;
+    border:1px solid #000;
+    padding:2% 5% 5%;
+    border-radius:20px;
+    background:#7E8AA2;
+    color:#000
+}
+
+.homebar,.loginbar {
+    width:100%;
+    background:#000;
+    height:100px;
+    top:0;
+    position:absolute;
+}
+
+.names {
+    text-align:center;
+    float: left;
+}
+
+/***
+buttons
+***/
+.homebutton{
+    border-radius:10%;
+    width:15%;
+    height:60%;
+    float:right;
+    margin-top:5%;
+    margin-right: 5%;
+    background:#FFF;
+    border:1px solid #000;
+    z-index:15;
+}
+
+/***********
+dialog box
+***********/
+.popupbox {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.popupbox:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.popupbox > div {
+    width: 300px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
